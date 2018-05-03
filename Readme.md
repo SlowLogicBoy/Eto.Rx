@@ -1,8 +1,8 @@
 # Eto.Rx
 
-Reactive extensions for [Eto](https://github.com/picoe/Eto) (adds observables for Eto events.)
+Reactive extensions for [Eto.Forms](https://github.com/picoe/Eto) (adds observables for Eto events.)
 
-Example:
+Example usage:
 
 ```csharp
 new TextBox().Events().KeyUp
