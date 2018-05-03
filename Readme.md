@@ -4,6 +4,15 @@ Reactive extensions for [Eto.Forms](https://github.com/picoe/Eto) (adds observab
 
 Example usage:
 
+Instead of
+```csharp
+var txt = new TextBox();
+txt.KeyUp += (s, e) => {
+    if(e.KeyData != (Keys.Control | Keys.C)) return;
+    Console.WriteLine("'Control + C' was pressed");
+};
+```
+you can do:
 ```csharp
 new TextBox().Events().KeyUp
     .Select(k => k.KeyData)
