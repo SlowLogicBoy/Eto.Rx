@@ -14,7 +14,8 @@ txt.KeyUp += (s, e) => {
 ```
 you can do:
 ```csharp
-new TextBox().Events().KeyUp
+var txt = new TextBox();
+txt.Events().KeyUp
     .Select(k => k.KeyData)
     .Where(k => k == (Keys.Control | Keys.C))
     .Subscribe(k => Console.WriteLine("'Control + C' was pressed"));
